@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPartController">
+   <children>
+      <Label layoutX="57.0" layoutY="50.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouseRadio" layoutX="203.0" layoutY="57.0" mnemonicParsing="false" onAction="#onInHouseRadio" text="In-House">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="modifyPart" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="outsourcedRadio" layoutX="356.0" layoutY="57.0" mnemonicParsing="false" onAction="#onOutsourcedRadio" text="Outsourced" toggleGroup="$modifyPart">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </RadioButton>
+      <VBox layoutX="66.0" layoutY="138.0" prefHeight="200.0" prefWidth="100.0" spacing="35.0">
+         <children>
+            <Label fx:id="partIdLabel" text="ID" />
+            <Label fx:id="partNameLabel" text="Name" />
+            <Label fx:id="partInventoryLabel" text="Inventory" />
+            <Label fx:id="partPriceLabel" text="Price/Cost" />
+            <Label fx:id="partMaxLabel" text="Max" />
+            <Label fx:id="partSourceLabel" text="MachineID" />
+         </children>
+      </VBox>
+      <VBox layoutX="166.0" layoutY="138.0" prefHeight="275.0" prefWidth="166.0" spacing="25.0">
+         <children>
+            <TextField fx:id="partIdInput" editable="false" promptText="Auto Generated - Disabled" />
+            <TextField fx:id="partNameInput" />
+            <TextField fx:id="partInventoryInput" />
+            <TextField fx:id="partPriceInput" />
+            <TextField fx:id="partMaxInput" />
+            <TextField fx:id="partSourceInput" />
+         </children>
+      </VBox>
+      <Label fx:id="partMinLabel" layoutX="347.0" layoutY="343.0" text="Min" />
+      <TextField fx:id="partMinInput" layoutX="381.0" layoutY="339.0" prefHeight="25.0" prefWidth="166.0" />
+      <Button fx:id="partSaveButton" layoutX="381.0" layoutY="524.0" mnemonicParsing="false" onAction="#onPartSaveButton" text="Save" />
+      <Button fx:id="partCancelButton" layoutX="458.0" layoutY="524.0" mnemonicParsing="false" onAction="#onPartCancelButton" text="Cancel" />
+   </children>
+</AnchorPane>
